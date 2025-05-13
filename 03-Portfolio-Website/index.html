@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Basic Website</title>
+</head>
+
+<body>
+    <!--Header-->
+    <header id="home">
+        <!--Nav-->
+        <nav>
+            <div class="logo">
+                <h2>Gerardo Briseño</h2>
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <div class = 'toggle-switch'>
+                        <label>
+                            <input id="tema-boton" type = 'checkbox'>
+                            <span class = 'slider'></span>
+                        </label>
+                    </div>            
+                </li>
+                <li class="nav-link"><a href="#home">Home</a></li>
+                <li class="nav-link"><a href="#about">Projects</a></li>
+                <li class="nav-link"><a href="#about">About</a></li>
+                <li class="nav-link"><a href="#reviews">Reviews</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero__container">
+            <h1>Fontend Developer</h1>
+            <p>Html only with proper layout, no styling</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="contenedor" id="about">
+            <div class="categoria portfolio">
+                <h2>Proyectos</h2>
+                <div class="card">HTML only portfolio</div>
+                <div class="card">Calculator</div>
+                <div class="card">Quiz App </div>
+                <div class="card">Countdown Timer </div>
+                <div class="card">Product Upcomming Page</div>
+            </div>
+            <div class="categoria">
+                <h2>Experiencia</h2>
+                <article>
+                    <h4>Roadmap.sh</h4>
+                    <p>Solved all the frontend projects.</p>
+                    <a href="#">Visit my profile</a>
+                </article>
+                <article>
+                    <h4>Roadmap.sh</h4>
+                    <p>Solved all the frontend projects.</p>
+                    <a href="#">Visit my profile</a>
+                </article>                
+            </div>
+            <div class="categoria">
+                <h2>Educación</h2>
+                <p>Graduated with 3.75 out of 4 CGPA. Won Acme Hackthon. Organized 30 sessions.</p>
+                <p>Courses I took:</p>
+                <ul>
+                    <li>Object Oriented Programming</li>
+                    <li>Data Structures and Algorihtms</li>
+                    <li>Web engenieering</li>
+                    <li>Artificiaall intelligence</li>
+                    <li>Human computer Interaction </li>
+                    <li>Computer Graphics</li>
+                    <li>Database Management Systems</li>
+                    <li>Distributed Database Systems</li>
+                </ul>
+            </div>
+        </section>
+    
+
+        <section id="reviews" class="reviews">
+            <h2>Reviews from my teachers</h2>
+            <div class="reviews__containeer">
+                <div class="card">
+                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo iure
+                        eaque est voluptates officia?</p>
+                    <p class="card__name">Jane Doe</p>
+                    <p class="card__work">Assistant Professor</p>
+                </div>
+                <div class="card">
+                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo iure
+                        eaque est voluptates officia?</p>
+                    <p class="card__name">Jane Doe</p>
+                    <p class="card__work">Assistant Professor</p>
+                </div>
+                <div class="card">
+                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo iure
+                        eaque est voluptates officia?</p>
+                    <p class="card__name">Jane Doe</p>
+                    <p class="card__work">Assistant Professor</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2025 My Web Site | @ all rights reserved</p>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+    <script>
+    const botonTema = document.getElementById("tema-boton");
+    const body = document.body;
+
+    // Comprueba el tema guardado en localStorage
+    if (localStorage.getItem("tema") === "dark") {
+        body.classList.add("dark-mode");
+    } else {
+        body.classList.add("light-mode");
+    }
+
+    botonTema.addEventListener("click", () => {
+        if (body.classList.contains("dark-mode")) {
+            body.classList.remove("dark-mode");
+            body.classList.add("light-mode");
+            localStorage.setItem("tema", "light");
+        } else {
+            body.classList.remove("light-mode");
+            body.classList.add("dark-mode");
+            localStorage.setItem("tema", "dark");
+        }
+    });
+</script>
+</body>
+
+</html>

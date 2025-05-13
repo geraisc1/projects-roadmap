@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+}
+.container{
+    border: 2px solid;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 35px;
+}
+.hero__lined{
+    font-weight: bold;
+    width: 80%;
+}
+.hero{
+    padding: 15px 0;
+}
+.hero__title{
+    margin-top: 15px;
+    font-weight: 500;
+}
+.hero__puesto{
+    margin: 10px 0;
+    color: #0cbb0c;
+}
+.hero__info p{
+    margin-bottom: 2px;
+}
+.container section{
+    margin-bottom: 20px;
+}
+.skills .title{
+    margin-bottom: 5px;
+}
+section .title{
+    color: #0cbb0c;
+}
+section .subtitle{
+    color: #3535d4ea;
+    margin-top: 10px;
+    font-size: 14px;
+}
+section .description{
+ margin: 5px 0 7px 0;   
+}
+.experience ul{
+    padding-left: 15px;
+    line-height: 1.5;
+}
+
